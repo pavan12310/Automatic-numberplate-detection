@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Number Plate Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Automatic Number Plate Detection</h1>
+
+        <!-- Option to capture image from the camera -->
+        <section class="form-section">
+            <h2>Capture Image from Camera</h2>
+            <form action="{{ url_for('capture') }}" method="post">
+                <button type="submit">Capture and Detect</button>
+            </form>
+        </section>
+
+        <!-- Option to process an existing image to extract numbers -->
+        <section class="form-section">
+            <h2>Process Existing Image</h2>
+            <form action="{{ url_for('process_image') }}" method="post">
+                <input type="text" name="image_path" placeholder="Enter the image path" required>
+                <button type="submit">Process and Extract Numbers</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<config>
+    <haar_cascade>haarcascades/haarcascade_plate_number.xml</haar_cascade>
+    <canny_threshold1>30</canny_threshold1>
+    <canny_threshold2>200</canny_threshold2>
+</config>
